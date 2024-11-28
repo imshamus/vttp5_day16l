@@ -10,13 +10,13 @@ import sg.edu.nus.iss.vttp5_day16l.constant.Constant;
 @Repository
 public class ValueRepo {
     
-    // slide 20
+    // D15 - slide 20
 
     @Autowired
     @Qualifier(Constant.template01)
     RedisTemplate<String, String> template;
 
-    // slide 24 - create/update a value 
+    // D15 - slide 24 - create/update a value 
     public void createValue(String key, String value) {
         template.opsForValue().set(key, value);
 
@@ -24,17 +24,17 @@ public class ValueRepo {
         // setIfAbsent
     }
 
-    // slide 25 -retrieve a value
+    // D15 - slide 25 -retrieve a value
     public String getValue(String key) {
         return template.opsForValue().get(key);
     }
 
-    // slide 27 - delete
+    // D15 - slide 27 - delete
     public Boolean deleteValue(String key) {
         return template.delete(key);
     }
 
-    // slide 26 - only works for key with integer value
+    // D15 - slide 26 - only works for key with integer value
     public void incrementValue(String key) {
         template.opsForValue().increment(key);
     }
@@ -51,7 +51,7 @@ public class ValueRepo {
         template.opsForValue().decrement(key, value);
     }
 
-    // slide 28
+    // D15 - slide 28
     public Boolean checkExists(String key) {
         return template.hasKey(key);
     }

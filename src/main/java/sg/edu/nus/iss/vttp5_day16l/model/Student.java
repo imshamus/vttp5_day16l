@@ -5,7 +5,7 @@ public class Student {
     private Integer id;
     private String fullName;
     private String email;
-    private String phoneNumber;
+    private String phoneNumber; // String because can use regular expressions? methods to check 9 or 8 etc? "text" in input type of studentform.html?
 
     // Constructors
     public Student() {

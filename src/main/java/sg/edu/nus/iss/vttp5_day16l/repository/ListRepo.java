@@ -17,7 +17,7 @@ public class ListRepo {
     @Qualifier(Constant.template01)
     RedisTemplate<String, String> template;
 
-    // slide 30, slide 34
+    // D15 - slide 30, slide 34
     public void leftPush(String key, String value) {
         template.opsForList().leftPush(key, value);
     }
@@ -26,17 +26,17 @@ public class ListRepo {
         template.opsForList().rightPush(key, value);
     }
 
-    // slide 30
+    // D15 - slide 30
     public void leftPop(String key) {
         template.opsForList().leftPop(key, 1);
     }
 
-    // slide 32
+    // D15 - slide 32
     public String get(String key, Integer index) {
         return template.opsForList().index(key, index).toString();
     }
 
-    // slide 33
+    // D15 - slide 33
     public Long size(String key) {
         return template.opsForList().size(key);
     }

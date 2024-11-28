@@ -13,7 +13,7 @@ import sg.edu.nus.iss.vttp5_day16l.constant.*;;
 
 @Configuration
 public class RedisConfig {
-        // slide 17
+        // D15 - slide 17
 
     @Value("${spring.data.redis.host}")
     private String redisHost;
@@ -28,7 +28,7 @@ public class RedisConfig {
     private String redisPassword;
 
 
-    // slide 18
+    // D15 - slide 18
 
     @Bean
     public JedisConnectionFactory jedisConnectionFactory() {
